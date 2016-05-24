@@ -31,55 +31,55 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
+  // setup an abstract state for the mains directive
+    .state('main', {
+    url: '/main',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/main.html'
   })
 
-  // Each tab has its own nav history stack:
+  // Each main has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('main.index', {
+    url: '/index',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'main-index': {
+        templateUrl: 'templates/main-index.html',
+        controller: 'IndexCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('main.day', {
+      url: '/day',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'main-day': {
+          templateUrl: 'templates/main-day.html',
+          controller: 'DayCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('main.week', {
+      url: '/week',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'main-week': {
+          templateUrl: 'templates/main-week.html',
+          controller: 'WeekCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('main.month', {
+    url: '/month',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'main-month': {
+        templateUrl: 'templates/main-month.html',
+        controller: 'MonthCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/main/index');
 
 });
