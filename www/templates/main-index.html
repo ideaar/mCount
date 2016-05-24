@@ -8,10 +8,18 @@
 	<ion-header-bar class='bar-positive'>
 	<h1 class='title'>mCount</h1>
 	</ion-header-bar>
-	<ion-content class="padding">
-		<img ng-src="{{chat.face}}" style="width: 64px; height: 64px">
-		<p>
-			{{chat.lastText}}
-		</p>
+	<ion-content  padding=false scroll=false>
+		<div  class='time_common time_first'>
+			<a class='time_label time_label_first'>今天：</a><span class='time_label time_label_second'>0.00</span>
+		</div>
+		<div  class='time_common'>
+			<a class='time_label time_label_first'>本周：</a><span class='time_label time_label_second'>0.00</span>
+		</div>
+		<div  class='time_common'>
+			<a class='time_label time_label_first'>本月：</a><span class='time_label time_label_second'>0.00</span>
+		</div>
+		<div class='add_st'>
+			<p><button  class='button button-positive'>记一笔</button></p>
+		</div>
 	</ion-content>
 </ion-view>
