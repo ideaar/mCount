@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.directives'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.directives', 'ionic-datepicker'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,7 +22,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider){
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, ionicDatePickerProvider){
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
@@ -95,4 +95,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     $ionicConfigProvider.tabs.position('bottom');
     $ionicConfigProvider.tabs.style('standard');
     $ionicConfigProvider.navBar.alignTitle('center');
+
+    var datePickerObj = {
+      inputDate: new Date(),
+      weeksList: ["一", "二", "三", "四", "五", "六", "日"],
+      monthsList: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+    };
+    ionicDatePickerProvider.configDatePicker(datePickerObj);
 });

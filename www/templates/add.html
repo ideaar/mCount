@@ -1,11 +1,20 @@
-<ion-view class='tabs-item-hide' hide-tabs >
+<ion-view class='tabs-item-hide' hide-tabs title='新增' >
 	<ion-nav-back-button class="button-clear">
-    	<i class="ion-arrow-left-c"></i> Back
+    	<i class="ion-arrow-left-c"></i>
 	</ion-nav-back-button>
 	<ion-content scroll=false padding=false tabs-item-hide>
-	a
+		<div class="list">
+		  <label class="item item-input">
+			<span class="input-label">支出：</span>
+			<input type="text" class='text-bold' placeholder='0.00' ng-model='mData.expend'/>
+		  </label>
+		  <label class="item item-input">
+			<span class="input-label">日期：</span>
+			<input type="text" class='text-bold'  ng-click='openDatePicker()' ng-model="mData.slTime | date:'yyyy-MM-dd'" />
+		  </label>
+		</div>
 	</ion-content>
-	<ion-footer-bar>
-	<button class='button'>添加</button>
+	<ion-footer-bar class='footer-no-border' >
+		<button class='button button-positive button-block button-round footer-button'>添加</button>
 	</ion-footer-bar>
 </ion-view>

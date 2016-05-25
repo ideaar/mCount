@@ -1,7 +1,10 @@
 /* Empty. Add your own CSS if you like */
-.time_common{ height: 50px; width:100%; text-align:center;position:relative}
-.time_first{margin-top:50px;}
-.time_label{display:inline-block;position:absolute;bottom:0px;font-weight:bold;}
-.time_label_first{margin-left:-60px;border-bottom:1px #387ef5 solid}
-.time_label_second{font-size:30px;line-height:30px}
-.add_st{height:30px; width:100%; margin-top:100px;text-align:center}
+.time-common{ height: 50px; width:100%; text-align:center;position:relative}
+.time-first{margin-top:50px;}
+.time-label{display:inline-block;position:absolute;bottom:0px;font-weight:bold;}
+.time-label-first{margin-left:-60px;border-bottom:1px #387ef5 solid}
+.time-label-second{font-size:30px;line-height:30px}
+.add-st{height:30px; width:100%; margin-top:100px;text-align:center;}
+.footer-no-border{background-size:0px;}
+.footer-button{margin-top:0px !important}
+.text-bold{font-weight:bold;}
