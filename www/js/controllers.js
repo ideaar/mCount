@@ -1,7 +1,6 @@
 angular.module('starter.controllers', [])
 
 .controller('IndexCtrl', function($scope) {
-	
 })
 
 .controller('DayCtrl', function($scope, Chats) {
@@ -27,4 +26,8 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
-});
+})
+
+.controller('AddCtrl', function($scope){
+})
+
